@@ -3,23 +3,28 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+    android:background="@color/gray"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="372dp"
         android:layout_height="120dp"
         android:layout_marginTop="16dp"
-        android:text="Hello World!"
+        android:text="0"
+        android:background="@color/white"
+        android:textSize="64sp"
+        android:gravity="end|center_vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnLeftPar"
+        android:id="@+id/btnC"
         style="@style/CalculatorButtonActions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -28,13 +33,13 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
-        android:id="@+id/btnRightPar"
+        android:id="@+id/btnDel"
         style="@style/CalculatorButtonActions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Del"
-        app:layout_constraintStart_toEndOf="@+id/btnLeftPar"
-        app:layout_constraintTop_toTopOf="@+id/btnLeftPar" />
+        app:layout_constraintStart_toEndOf="@+id/btnC"
+        app:layout_constraintTop_toTopOf="@+id/btnC" />
 
     <Button
         android:id="@+id/btnPerc"
@@ -42,8 +47,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="/"
-        app:layout_constraintStart_toEndOf="@+id/btnRightPar"
-        app:layout_constraintTop_toTopOf="@+id/btnRightPar" />
+        app:layout_constraintStart_toEndOf="@+id/btnDel"
+        app:layout_constraintTop_toTopOf="@+id/btnDel" />
 
     <Button
         android:id="@+id/btnMult"
@@ -61,8 +66,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="7"
-        app:layout_constraintStart_toStartOf="@+id/btnLeftPar"
-        app:layout_constraintTop_toBottomOf="@+id/btnLeftPar" />
+        app:layout_constraintStart_toStartOf="@+id/btnC"
+        app:layout_constraintTop_toBottomOf="@+id/btnC" />
 
     <Button
         android:id="@+id/btn8"
@@ -70,8 +75,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="8"
-        app:layout_constraintStart_toEndOf="@+id/btnLeftPar"
-        app:layout_constraintTop_toBottomOf="@+id/btnRightPar" />
+        app:layout_constraintStart_toEndOf="@+id/btnC"
+        app:layout_constraintTop_toBottomOf="@+id/btnDel" />
 
     <Button
         android:id="@+id/btn9"
@@ -79,7 +84,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="9"
-        app:layout_constraintStart_toEndOf="@+id/btnRightPar"
+        app:layout_constraintStart_toEndOf="@+id/btnDel"
         app:layout_constraintTop_toBottomOf="@+id/btnPerc" />
 
     <Button
