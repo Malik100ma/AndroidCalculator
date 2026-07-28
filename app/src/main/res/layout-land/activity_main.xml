@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
+    android:background="@color/gray"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
@@ -14,6 +15,7 @@
         android:layout_marginTop="4dp"
         android:text="0"
         android:textSize="64sp"
+        android:background="@color/white"
         android:gravity="end|center_vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.71"
