@@ -16,6 +16,7 @@
         android:background="@color/white"
         android:gravity="end|center_vertical"
         android:text="0"
+        android:padding="16dp"
         android:textSize="64sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.71"

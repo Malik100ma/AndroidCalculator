@@ -46,28 +46,29 @@ public class MainActivity extends AppCompatActivity {
     private void addPoint() {
         String text = tvDisplay.getText().toString();
 
-        if (newNumber){
+        if (newNumber) {
             tvDisplay.setText("0.");
             newNumber = false;
-        }else if (!text.contains(".")){
+        } else if (!text.contains(".")) {
             tvDisplay.append(".");
         }
     }
 
-    public void clearDigit(){
+    public void clearDigit() {
         if (newNumber == true) {
             return;
         }
         String text = tvDisplay.getText().toString();
-        if (text.length() > 1){
-            tvDisplay.setText(text.substring(0, text.length()-1));
-        }else {
+        if (text.length() > 1) {
+            tvDisplay.setText(text.substring(0, text.length() - 1));
+        } else {
             newNumber = true;
             tvDisplay.setText("0");
         }
 
 
     }
+
     public void clearAll() {
         newNumber = true;
         tvDisplay.setText("0");
