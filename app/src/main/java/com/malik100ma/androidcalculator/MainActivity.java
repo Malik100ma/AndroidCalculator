@@ -12,6 +12,8 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainActivity extends AppCompatActivity {
 
     private boolean newNumber = true;
+
+
     private TextView tvDisplay;
 
     @Override
@@ -38,7 +40,20 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btn0).setOnClickListener(v -> addDigit("0"));
         findViewById(R.id.btnC).setOnClickListener(v -> clearAll());
         findViewById(R.id.btnDel).setOnClickListener(v -> clearDigit());
+        findViewById(R.id.btnPoint).setOnClickListener(v -> addPoint());
     }
+
+    private void addPoint() {
+        String text = tvDisplay.getText().toString();
+
+        if (newNumber){
+            tvDisplay.setText("0.");
+            newNumber = false;
+        }else if (!text.contains(".")){
+            tvDisplay.append(".");
+        }
+    }
+
     public void clearDigit(){
         if (newNumber == true) {
             return;
