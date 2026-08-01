@@ -37,9 +37,23 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btn9).setOnClickListener(v -> addDigit("9"));
         findViewById(R.id.btn0).setOnClickListener(v -> addDigit("0"));
         findViewById(R.id.btnC).setOnClickListener(v -> clearAll());
+        findViewById(R.id.btnDel).setOnClickListener(v -> clearDigit());
     }
+    public void clearDigit(){
+        if (newNumber == true) {
+            return;
+        }
+        String text = tvDisplay.getText().toString();
+        if (text.length() > 1){
+            tvDisplay.setText(text.substring(0, text.length()-1));
+        }else {
+            newNumber = true;
+            tvDisplay.setText("0");
+        }
 
-    private void clearAll() {
+
+    }
+    public void clearAll() {
         newNumber = true;
         tvDisplay.setText("0");
         setTextSize();

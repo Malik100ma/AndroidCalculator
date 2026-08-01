@@ -10,13 +10,13 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="372dp"
-        android:layout_height="120dp"
+        android:layout_width="724dp"
+        android:layout_height="123dp"
         android:layout_marginTop="4dp"
-        android:text="0"
-        android:textSize="64sp"
         android:background="@color/white"
         android:gravity="end|center_vertical"
+        android:text="0"
+        android:textSize="64sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.71"
         app:layout_constraintStart_toStartOf="parent"
@@ -215,7 +215,7 @@
         style="@style/CalculatorButtonActions"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="X"
+        android:text="X!"
         app:layout_constraintStart_toEndOf="@+id/btnRad"
         app:layout_constraintTop_toTopOf="@+id/btnRad" />
 
@@ -338,9 +338,8 @@
         style="@style/CalculatorButtonActions"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="112dp"
         android:text="AC"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnDel"
         app:layout_constraintStart_toEndOf="@+id/btnPerc"
         app:layout_constraintTop_toTopOf="@+id/btnPerc" />
 
@@ -349,10 +348,19 @@
         style="@style/CalculatorButtonActions"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="112dp"
         android:text="/"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btnMult"
         app:layout_constraintStart_toEndOf="@+id/btn9"
         app:layout_constraintTop_toBottomOf="@+id/btnPerc" />
+
+    <Button
+        android:id="@+id/btnDel"
+        style="@style/CalculatorButtonActions"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Del"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toEndOf="@+id/btnC"
+        app:layout_constraintTop_toTopOf="@+id/btnC" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
