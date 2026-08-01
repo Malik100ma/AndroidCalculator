@@ -1,6 +1,7 @@
 package com.malik100ma.androidcalculator;
 
 import android.os.Bundle;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +10,9 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
+
+    private boolean newNumber = true;
+    private TextView tvDisplay;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +23,47 @@ public class MainActivity extends AppCompatActivity {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
+
         });
+        tvDisplay = findViewById(R.id.textView);
+        findViewById(R.id.btn1).setOnClickListener(v -> addDigit("1"));
+        findViewById(R.id.btn2).setOnClickListener(v -> addDigit("2"));
+        findViewById(R.id.btn3).setOnClickListener(v -> addDigit("3"));
+        findViewById(R.id.btn4).setOnClickListener(v -> addDigit("4"));
+        findViewById(R.id.btn5).setOnClickListener(v -> addDigit("5"));
+        findViewById(R.id.btn6).setOnClickListener(v -> addDigit("6"));
+        findViewById(R.id.btn7).setOnClickListener(v -> addDigit("7"));
+        findViewById(R.id.btn8).setOnClickListener(v -> addDigit("8"));
+        findViewById(R.id.btn9).setOnClickListener(v -> addDigit("9"));
+        findViewById(R.id.btn0).setOnClickListener(v -> addDigit("0"));
+        findViewById(R.id.btnC).setOnClickListener(v -> clearAll());
+    }
+
+    private void clearAll() {
+        newNumber = true;
+        tvDisplay.setText("0");
+        setTextSize();
+    }
+
+    public void addDigit(String digit) {
+        if (newNumber) {
+            tvDisplay.setText(digit);
+            newNumber = false;
+        } else {
+            tvDisplay.append(digit);
+        }
+        if (tvDisplay.length() > 8) {
+            tvDisplay.setTextSize(32);
+        } else {
+            tvDisplay.setTextSize(64);
+        }
+    }
+
+    private void setTextSize() {
+        if (tvDisplay.length() > 8) {
+            tvDisplay.setTextSize(32);
+        } else {
+            tvDisplay.setTextSize(64);
+        }
     }
 }
