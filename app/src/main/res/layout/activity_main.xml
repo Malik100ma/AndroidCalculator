@@ -43,7 +43,7 @@
         app:layout_constraintTop_toTopOf="@+id/btnC" />
 
     <Button
-        android:id="@+id/btnPerc"
+        android:id="@+id/btnDiv"
         style="@style/CalculatorButtonActions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -58,8 +58,8 @@
         android:layout_height="wrap_content"
         android:text="*"
         app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintStart_toEndOf="@+id/btnPerc"
-        app:layout_constraintTop_toTopOf="@+id/btnPerc" />
+        app:layout_constraintStart_toEndOf="@+id/btnDiv"
+        app:layout_constraintTop_toTopOf="@+id/btnDiv" />
 
     <Button
         android:id="@+id/btn7"
@@ -86,7 +86,7 @@
         android:layout_height="wrap_content"
         android:text="9"
         app:layout_constraintStart_toEndOf="@+id/btnDel"
-        app:layout_constraintTop_toBottomOf="@+id/btnPerc" />
+        app:layout_constraintTop_toBottomOf="@+id/btnDiv" />
 
     <Button
         android:id="@+id/btnMin"
@@ -95,7 +95,7 @@
         android:layout_height="wrap_content"
         android:text="-"
         app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintStart_toEndOf="@+id/btnPerc"
+        app:layout_constraintStart_toEndOf="@+id/btnDiv"
         app:layout_constraintTop_toBottomOf="@+id/btnMult" />
 
     <Button

@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">AndroidCalculator</string>
+    <string name="app_name">AdnroidCalculator</string>
+    <string name="divNull">Division by zero is prohibited!</string>
 </resources>
